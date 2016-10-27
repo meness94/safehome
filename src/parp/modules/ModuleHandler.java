@@ -14,7 +14,7 @@ public abstract class ModuleHandler implements Runnable {
 	public Collection<Module> getModules() {
 		return modules;
 	}
-	
-	public void run(){
+
+	public void run() {
 	}
 }

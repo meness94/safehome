@@ -9,5 +9,5 @@ package parp;
  */
 interface IAlarmListener {
 	public void pushAlarm(Alarm al);
-	
+
 }

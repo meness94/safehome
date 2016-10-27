@@ -8,7 +8,6 @@ package parp.modules;
  *
  */
 public class SensorModule extends Module {
-
 	/*
 	 * (non-Javadoc)
 	 * 

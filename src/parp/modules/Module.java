@@ -7,6 +7,7 @@ package parp.modules;
  */
 public abstract class Module implements Runnable {
 	public abstract void setConfig(CharSequence c);
+
 	public abstract CharSequence getConfig();
-	
+
 }

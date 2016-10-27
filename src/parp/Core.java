@@ -32,5 +32,5 @@ class Core {
 	public void setAlarmActive(boolean active) {
 		this.al = (active) ? new ActiveAlarmListener() : new InactiveAlarmListener();
 	}
-	
+
 }
