@@ -16,4 +16,8 @@ class ActiveAlarmListener implements IAlarmListener {
 		// TODO Auto-generated method stub
 	}
 
+	@Override
+	public String getActive() {
+		return "active";
+	}
 }

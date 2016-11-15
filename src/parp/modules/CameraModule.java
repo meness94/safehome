@@ -3,17 +3,24 @@
  */
 package parp.modules;
 
+import java.awt.Image;
 import java.net.Socket;
 
 /**
  * @author Jan Alexander Stiehl
  *
  */
-public class SensorModule extends Module {
-	public SensorModule(Socket accept) {
+public class CameraModule extends Module {
+	
+	public CameraModule(Socket accept) {
 		// TODO Auto-generated constructor stub
 		super(accept);
 	}
+	
+	public Image getImage(){
+		return null;
+	}
+
 
 	@Override
 	public void run() {
@@ -38,17 +45,5 @@ public class SensorModule extends Module {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-//	@Override
-//	public void setConfig(CharSequence c) {
-//		// TODO Auto-generated method stub
-//
-//	}
-//
-//	@Override
-//	public CharSequence getConfig() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 }
