@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsf/core">
+
+<head>
+<title>Settings</title>
+<link rel="
+	stylesheet" href="style.css" type="text/css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<h:body>
+	<a href="./index.xhtml">zurück</a>
+	<br /> Einrichtung:
+	<br />
+	<h:commandButton value="Sensor hinzufügen" type="button" />
+	<!-- toDo: Interface zum Hinzufügen -->
+	<br />
+	<h:commandButton value="RFID-Chip pairen" type="button" />
+	<!-- toDo: RFID-Timeout/Successwindow anzeigen -->
+	<br />
+	<h:commandButton value="Kamera-Status ändern" type="button" />
+	<!-- toDo: Kamera an/ausschalten -->
+	<br />
+	<h:commandButton value="System-Status ändern" type="button" />
+	<!-- toDo change Systemstate -->
+	<br />
+
+	<h:form>
+		<label for="alarmtime">Zeit bis Alarm (Sekunden):</label>
+		<h:selectOneMenu value="#{SettingsHandler.alarmtime}">
+			<f:selectItem itemValue="5" itemLabel="5" />
+			<f:selectItem itemValue="10" itemLabel="10" />
+			<f:selectItem itemValue="20" itemLabel="20" />
+			<f:selectItem itemValue="60" itemLabel="60" />
+		</h:selectOneMenu>
+		<br />
+		<label for="loudness">Lautstärke Alarm:</label>
+		<h:selectOneMenu value="#{SettingsHandler.loudness}">
+			<f:selectItem itemValue="1" itemLabel="1" />
+			<f:selectItem itemValue="2" itemLabel="2" />
+			<f:selectItem itemValue="3" itemLabel="3" />
+			<f:selectItem itemValue="4" itemLabel="4" />
+		</h:selectOneMenu>
+		<br />
+		<label for="length">Dauer des Alarms (Minuten):</label>
+		<h:selectOneMenu value="#{SettingsHandler.length}">
+			<f:selectItem itemValue="1" itemLabel="1" />
+			<f:selectItem itemValue="5" itemLabel="5" />
+			<f:selectItem itemValue="10" itemLabel="10" />
+		</h:selectOneMenu>
+		<br />
+		<h:commandButton value="Speichern" action="#{SettingsHandler.submit}" />
+	</h:form>
+
+</h:body>
+</html>
